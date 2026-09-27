@@ -1,0 +1,63 @@
+.background-container {
+    display: contents;
+}
+
+/* YouTube iframe — cover viewport with 16:9 aspect ratio */
+.background-yt {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Always cover viewport regardless of aspect ratio */
+    width: 100vw;
+    height: 56.25vw;   /* 16:9 ratio based on width */
+    min-height: 100vh;
+    min-width: 177.78vh; /* 16:9 ratio based on height */
+    z-index: -1;
+    pointer-events: none;
+}
+
+.background{
+    height: 100%;
+    width: 100%;
+    float: left;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+    position: fixed;
+    object-fit: cover;
+    z-index: 0; /* Nằm ngay trên màu nền body, nhưng dưới các nội dung khác */
+}
+
+.background-subpage-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 10%, rgba(20, 26, 38, 0.95), #0a0d14 90%);
+    z-index: -1;
+}
+
+.background-dimmed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(8, 10, 15, 0.75);
+    backdrop-filter: blur(4px);
+    z-index: 0;
+    pointer-events: none;
+}
+
+@keyframes fadeIn{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+.fade-in{
+    animation: fadeIn 600ms ease-in-out;
+}
+
