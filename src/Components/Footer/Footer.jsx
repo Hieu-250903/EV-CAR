@@ -1,5 +1,5 @@
 import './Footer.css';
-import { Zap, Phone, Send, ArrowUp, Youtube, Facebook, Twitter, Instagram } from 'lucide-react';
+import { Zap, Phone, Send, ArrowUp, Globe, MessageCircle, Video, Camera } from 'lucide-react';
 
 const Footer = ({ setActiveTab, onOpenTestDrive, onOpenDeposit }) => {
   const scrollToTop = () => {
@@ -12,10 +12,10 @@ const Footer = ({ setActiveTab, onOpenTestDrive, onOpenDeposit }) => {
   };
 
   const socialLinks = [
-    { icon: Facebook,  href: '#', label: 'Facebook' },
-    { icon: Youtube,   href: '#', label: 'YouTube'  },
-    { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: Twitter,   href: '#', label: 'Twitter'  },
+    { icon: Globe,          href: '#', label: 'Facebook' },
+    { icon: Video,          href: '#', label: 'YouTube'  },
+    { icon: Camera,         href: '#', label: 'Instagram' },
+    { icon: MessageCircle,  href: '#', label: 'Twitter'  },
   ];
 
   return (
